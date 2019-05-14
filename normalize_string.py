@@ -41,3 +41,11 @@ def clean_strings2(strings, *funcs):
 
 result = clean_strings2(states, str.strip, str.title, lambda s: re.sub('[!#?]', '', s))
 print(result)
+
+
+strings = ['foo', 'card', 'bar', 'abab', 'aaaa', 'abab', 'foo']
+# def strlen(s):
+#    return len(s)
+
+strings.sort(key=lambda s: len(s))
+print(strings)
